@@ -26,15 +26,6 @@
         "expires_at": "2021-03-06 19:48:14 UTC"
       },
       "id": 3
-    },
-    {
-      "username": "ana carla diaz",
-      "guest": {
-        "success": true,
-        "guest_session_id": "bd80c4a163368f6e657a4f49bd88c2e4",
-        "expires_at": "2021-03-09 22:10:49 UTC"
-      },
-      "id": 4
     }
   ]
 }
