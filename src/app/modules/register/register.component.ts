@@ -62,17 +62,6 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  login(): void {
-    this.authService.login(this.form.value.username).subscribe((user: User) => {
-      if (user.id) {
-        this.router.navigate(['/']);
-      }
-      this.msg = 'not founf'
-      console.log('login', user);
-
-    })
-  }
-
   getUsername(username: string) {
     return this.userService.getUsername(username)
   }
