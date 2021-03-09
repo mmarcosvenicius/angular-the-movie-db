@@ -40,8 +40,9 @@ npm i && npm i -g json-server
 ng s
 ## abrir outro terminal e rodar o comando
 json-server --watch bd.json
+
 ## esse segundo comando é necessário pra criar os usuário na aplicação
-## ROTA de usuários => GET, POST, PUT, DELETE
+## ROTA de usuários no backend => GET, POST, PUT, DELETE
 
 http://localhost:3000/users
 ## ROTAS da aplicação
