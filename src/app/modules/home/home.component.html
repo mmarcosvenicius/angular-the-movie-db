@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-12 mt-5">
+            <h2> Filmes em Cartaz </h2>
+        </div>
+    </div>
+    <div *ngIf="movies.length && !loading" class="row justify-content-center"
+        [ngClass]="{ 'mb-5': !loading && (currentPage == totalPages) }">
+
+        <div *ngFor="let movie of movies" class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4 scale">
+            <div class="card">
+                <img *ngIf="movie.poster_path" class="card-img-top"
+                    src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{movie.poster_path}}" alt="{{movie.title}}">
+                <img *ngIf="!movie.poster_path" class="card-img-top" src="../../../assets/default-img.jpg"
+                    alt="{{movie.title}}">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="card-text d-flex">
+                                <span class="vote">{{movie.vote_average}}</span>
+                            </p>
+                        </div>
+                        <div class="col-9">
+                            <p class="card-text text-muted d-flex justify-content-end">
+                                <!-- <ngb-rating [max]="maxRate" [(rate)]="movie.vote_rated" [readonly]="false"></ngb-rating> -->
+                                <a class="btn btn-warning text-white" [routerLink]="['/movie', movie.id]">Ver
+                                    detalhes</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-img-overlay text-light">
+                        <div class="title">{{movie.title}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!loading && (currentPage<=totalPages)" class="row justify-content-center pb-4em">
+        <a class="btn btn-movie text-white" (click)="getNowPlaying(currentPage)">Ver mais</a>
+    </div>
+
+    <div *ngIf="loading" class="row justify-content-center">
+        <app-spinner-loader></app-spinner-loader>
+    </div>
+</div>

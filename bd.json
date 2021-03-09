@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "username": "joe_doe",
+      "guest": {
+        "success": true,
+        "guest_session_id": "ae90323867c17ffcf8caa6056202f16e",
+        "expires_at": "2021-03-09 04:15:33 UTC"
+      },
+      "id": 1
+    },
+    {
+      "username": "ana_smith",
+      "guest": {
+        "success": true,
+        "guest_session_id": "029ff915d968dd35d2ea578cacf505ef",
+        "expires_at": "2021-03-09 05:07:43 UTC"
+      },
+      "id": 2
+    },
+    {
+      "username": "_erick",
+      "guest": {
+        "success": true,
+        "guest_session_id": "1cd74ac47d722a40ffea4797f9c19e32",
+        "expires_at": "2021-03-06 19:48:14 UTC"
+      },
+      "id": 3
+    },
+    {
+      "username": "ana carla diaz",
+      "guest": {
+        "success": true,
+        "guest_session_id": "bd80c4a163368f6e657a4f49bd88c2e4",
+        "expires_at": "2021-03-09 22:10:49 UTC"
+      },
+      "id": 4
+    }
+  ]
+}

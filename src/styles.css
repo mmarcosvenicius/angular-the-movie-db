@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background-color: #074858;
+  color: #fff;
+}
+
+.bg-main {
+  background-color: #23869e!important;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+  .scroll::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  .scroll::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+  }
+  .scroll::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+  }
+  .scroll::-webkit-scrollbar-thumb:active {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-track {
+    background: #343a40;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-track:hover {
+    background: #343a40;
+  }
+  .scroll::-webkit-scrollbar-track:active {
+    background: #343a40;
+  }
+  .scroll::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+.btn-movie {
+  background-color: #0e85a2;
+}
+
+.btn-movie:hover {
+  background-color: #0b7994;
+  z-index: 15;
+}
+
+.scale:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}

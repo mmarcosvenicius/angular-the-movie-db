@@ -1,0 +1,39 @@
+.title {
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+/* .card-img-top {
+    min-height: 300px;
+    max-height: 300px;
+} */
+
+.vote {
+    /*padding: 10px; */
+    /* background: #eab000; */
+    /* border-radius: 19%; */
+    color: #eab000;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.checked {
+    color: #eab000;
+}
+
+/* ngb-rating {
+    font-size: 25px;
+    color: #eab000;
+    outline: none;
+} */
+
+.card-img-overlay {
+    bottom: 4.5em;
+}
+.pb-4em {
+    padding-bottom: 4em;
+}

@@ -1,0 +1,42 @@
+.movie-leadspace {
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.movie-leadspace .default-bg {
+  background-image: radial-gradient(
+    circle at 20% 50%,
+    rgba(11.76%, 15.29%, 17.25%, 0.98) 0%,
+    rgba(19.61%, 21.96%, 23.53%, 0.88) 100%
+  );
+}
+
+.movie-leadspace .movie-title {
+  font-size: 3.4em;
+  line-height: 1.1em;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.no-padding {
+    padding:0
+}
+
+ngb-rating {
+    font-size: 25px;
+    color: #eab000;
+    outline: none;
+}
+
+p.overview {
+  min-height: 260px;
+  max-height: 260px;
+  overflow: auto;
+}
+
+@media (max-width: 767px) {
+  .d-flex {
+    justify-content: center !important;
+  }
+}

@@ -25,3 +25,28 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Instalar pacotes
+npm i && npm i -g json-server
+
+## Comandos para executar o Projeto
+## abrir o terminal e rodar o comando
+ng s
+## abrir outro terminal e rodar o comando
+json-server --watch bd.json
+## esse segundo comando é necessário pra criar os usuário na aplicação
+
+## ROTA de usuários => GET, POST, PUT, DELETE
+
+http://localhost:3000/users
+
+## Criado arquivo json na raiz para simular um banco de dados
+
+## ROTAS da aplicação
+
+/login
+/register
+/home
+/rated-movies
+/movie/{id}

@@ -1,0 +1,42 @@
+<div class="container-fluid no-padding">
+    <section ng-if="!loading && movie.id" class="movie-leadspace" [ngStyle]="{ 'background-image': 'url(' + movieUrlBackground + movie?.backdrop_path +')'}">
+        <div class="pd-top-40 pd-bottom-40 default-bg">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 txt-white-color mt-5">
+                        <h6 class="text-white font-source-sans-pro pd-top-20">
+                            <span class="movie-title"> {{movie?.title}} </span>
+                        </h6>
+
+                        <div class="pd-top-30 pd-bottom-10">
+                            <h4 class="text-white">Sinopse</h4>
+                            <p *ngIf="movie?.overview" class="text-white overview scroll">
+                                {{movie?.overview}} + {{movie?.overview}} + {{movie?.overview}}
+                            </p>
+                            <p *ngIf="!movie?.overview" class="text-white">
+                                Sinopse não foi encontrada para este filme.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 d-flex justify-content-end mt-5">
+                        <img class="img-resize img-fluid" src="{{imgBaseUrl + movie?.poster_path}}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 text-white pt-5 pb-5">
+                        <p>
+                            <a class="text-warning mr-2">{{movie.release_date | date:'dd/MM/yyyy'}}</a>
+                        </p>
+                    </div>
+                    <div class="col-9 text-white pt-5 pb-5 d-flex justify-content-end">
+                        <p class="text-center">
+                            <ngb-rating [max]="10" [(rate)]="currentRating" [readonly]="false"></ngb-rating><br>
+                            <a class="btn btn-warning btn-xs mr-2" (click)="rating(currentRating)">Avaliar</a>
+                            <a *ngIf="movieData?.rating" class="btn btn-warning btn-xs" (click)="deleteRating()">Remover Avaliação</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
