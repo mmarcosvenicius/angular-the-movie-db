@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
       if (user.id) {
         this.router.navigate(['/']);
       }
-      this.msg = 'Usuário não encontrado'
+      this.msg = 'Usuário não encontrado ou inativo'
       console.log('login', user);
 
     })

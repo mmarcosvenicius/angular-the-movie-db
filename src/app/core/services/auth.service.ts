@@ -55,10 +55,21 @@ export class AuthService {
   login(username: string) {
     return this.http.get<any>(`http://localhost:3000/users?username=${username}`)
       .pipe(
-        map((user: any) => {
-          if (user.length) {
-            this.setUserAuth(user[0])
-            return user[0];
+        map((response: any) => {
+          if (response.length) {
+
+            const user: User = response[0]
+            if (user) {
+
+              const now = new Date()
+              const expireAt = new Date(user.guest.expires_at)
+
+              if (user.id !== 3 && (now.getTime() > expireAt.getTime())) {
+                return new User('')
+              }
+              this.setUserAuth(user)
+              return user;
+            }
           }
           return new User('')
         }));
