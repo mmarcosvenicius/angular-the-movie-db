@@ -30,19 +30,20 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Instalar pacotes
 npm i && npm i -g json-server
 
+## Criar arquivo bd.json na raiz para simular um banco de dados
+## adcionar a seguinte estrutura no arquivo criado
+    {
+        "users": []
+    }
 ## Comandos para executar o Projeto
 ## abrir o terminal e rodar o comando
 ng s
 ## abrir outro terminal e rodar o comando
 json-server --watch bd.json
 ## esse segundo comando é necessário pra criar os usuário na aplicação
-
 ## ROTA de usuários => GET, POST, PUT, DELETE
 
 http://localhost:3000/users
-
-## Criado arquivo json na raiz para simular um banco de dados
-
 ## ROTAS da aplicação
 
 /login
