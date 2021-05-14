@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { User } from '../models/user.model';
 
 @Injectable({
@@ -7,26 +8,27 @@ import { User } from '../models/user.model';
 })
 export class UsersService {
 
+  private apiUrl = environment.apiUrl
   constructor(private http: HttpClient) { }
 
   getAll() {
-    return this.http.get<User[]>(`http://localhost:3000/users`);
+    return this.http.get<User[]>(`${this.apiUrl}/users`);
   }
 
   register(user: User) {
-    return this.http.post(`http://localhost:3000/users`, user);
+    return this.http.post(`${this.apiUrl}/users`, user);
   }
 
   getUser(user: User) {
-    return this.http.get(`http://localhost:3000/users/${user.id}`);
+    return this.http.get(`${this.apiUrl}/users/${user.id}`);
   }
 
   delete(user: User) {
-    return this.http.delete(`http://localhost:3000/users/${user.id}`);
+    return this.http.delete(`${this.apiUrl}/users/${user.id}`);
   }
 
   getUsername(username: string): Promise<any> {
-    return this.http.get(`http://localhost:3000/users?username=${username}`).toPromise()
+    return this.http.get(`${this.apiUrl}/users?username=${username}`).toPromise()
       .then((resposta: any) => resposta)
   }
 }

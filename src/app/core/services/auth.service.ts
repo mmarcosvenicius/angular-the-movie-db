@@ -14,6 +14,7 @@ export class AuthService {
 
   private urlApi = environment.urlApi
   private apiKey = environment.apiKey
+  private apiUrl = environment.apiUrl
 
   private userSubject: BehaviorSubject<User>;
   public user: Observable<User>;
@@ -42,7 +43,7 @@ export class AuthService {
 
 
   register(user: User) {
-    return this.http.post<User>(`http://localhost:3000/users`, user)
+    return this.http.post<User>(`${this.apiUrl}/users`, user)
       .pipe(
         map((user: User) => {
           if (user) {
@@ -53,7 +54,7 @@ export class AuthService {
   }
 
   login(username: string) {
-    return this.http.get<any>(`http://localhost:3000/users?username=${username}`)
+    return this.http.get<any>(`${this.apiUrl}/users?username=${username}`)
       .pipe(
         map((response: any) => {
           if (response.length) {
